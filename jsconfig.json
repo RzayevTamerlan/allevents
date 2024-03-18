@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@components*": ["./app/lib/common/components*"],
+      "@ui*": ["./app/lib/common/components/ui*"],
+      "@partials*": ["./app/lib/common/partials*"]
     }
   }
 }

@@ -1,7 +1,11 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+import HeroSection from "@partials/hero";
+import AboutUsSection from "@partials/about-us";
 
+export default function Home({params: {locale}}) {
+  return (
+    <main>
+      <HeroSection locale={locale}/>
+      <AboutUsSection locale={locale}/>
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import i18nConfig from "@/i18nConfig";
+import Header from "@partials/header";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export function generateStaticParams() {
 export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+      <Header locale={locale}/>
+      {children}
+      </body>
     </html>
   );
 }
