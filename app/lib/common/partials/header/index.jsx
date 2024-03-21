@@ -5,7 +5,7 @@ import LanguageSelect from "@partials/header/components/LanguageSelect";
 
 const Header = ({locale}) => {
   return (
-    <header className='bg-white py-5 fixed top-0 left-0 right-0'>
+    <header className='bg-white py-5 fixed top-0 left-0 right-0 z-30'>
       <div className="custom-container">
         <div className='flex items-center justify-between'>
           <Logo />

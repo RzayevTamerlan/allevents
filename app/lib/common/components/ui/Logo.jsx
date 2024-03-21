@@ -1,8 +1,8 @@
+import Image from "next/image";
+
 const Logo = () => {
   return (
-    <div className='text-xl font-semibold'>
-      All events
-    </div>
+    <Image width='200' height='111' src='/assets/logo/logo.png' alt='All events'/>
   );
 };
 
