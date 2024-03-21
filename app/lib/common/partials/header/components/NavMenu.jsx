@@ -58,6 +58,11 @@ const NavMenu = async ({locale}) => {
       label: 'trips',
       href: '#trips'
     },
+    {
+      label: 'sportsevents',
+      href: 'https://allevents-az.tickets-partners.com/',
+      target: '_blank'
+    }
   ]
 
   return (
@@ -67,7 +72,7 @@ const NavMenu = async ({locale}) => {
           return (
             (
               <li key={i}>
-                <Link className='text-medium transition-all duration-300 hover:text-secondary text-black font-bold'
+                <Link target={navItem.target || '_self'} className='text-medium transition-all duration-300 hover:text-secondary text-black font-bold'
                       href={navItem.href}>
                   {t(navItem.label)}
                 </Link>
