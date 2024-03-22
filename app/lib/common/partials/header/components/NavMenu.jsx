@@ -1,7 +1,9 @@
 import Link from "next/link";
 import initTranslations from "@/app/i18n";
 import Image from "next/image";
-import {Dropdown, Space} from "antd";
+import {Dropdown} from "antd";
+
+import "@partials/header/styles/dropdown.css";
 
 const NavMenu = async ({locale}) => {
   const {t} = await initTranslations(locale, ['header']);
@@ -13,31 +15,31 @@ const NavMenu = async ({locale}) => {
         {
           key: '1',
           label: (
-            <Link href='#'>{t('airticket')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('airticket')}</Link>
           )
         },
         {
           key: '2',
           label: (
-            <Link href='#'>{t('transport')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('transport')}</Link>
           )
         },
         {
           key: '3',
           label: (
-            <Link href='#'>{t('businesstrips')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('businesstrips')}</Link>
           )
         },
         {
           key: '4',
           label: (
-            <Link href='#'>{t('visa')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('visa')}</Link>
           )
         },
         {
           key: '5',
           label: (
-            <Link href='#'>{t('conferences')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('conferences')}</Link>
           )
         }
       ]
@@ -83,13 +85,13 @@ const NavMenu = async ({locale}) => {
         return (
           <li key={i}>
             <Dropdown
-              placement="bottom"
+              placement="bottomLeft"
               menu={{
                 items: navItem.list,
               }}
             >
               <button className='flex items-center gap-1.5 text-medium transition-all duration-300 hover:text-secondary text-black font-bold'>
-                {t(navItem.label)} <Image width='10' height='10' src='/assets/icons/arrow-down.svg'/>
+                {t(navItem.label)} <Image alt='Arrow down' width='10' height='10' src='/assets/icons/arrow-down.svg'/>
               </button>
             </Dropdown>
           </li>

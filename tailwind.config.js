@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontSize: {
         "sm": '15px',
+        "base-sm": '14px',
         "base": '16px',
         "medium": "18px",
         "lg": "22px",
@@ -19,7 +20,8 @@ module.exports = {
       colors: {
         secondary: '#FF9E1B',
         'hero-subcontent': '#00AFD7',
-        'hero-btn': '#FF6720'
+        'hero-btn': '#FF6720',
+        'nav-menu-item': '#141B4D'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
