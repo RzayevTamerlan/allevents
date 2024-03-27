@@ -10,6 +10,11 @@ export default function Home({params: {locale}}) {
       <HeroSection locale={locale}/>
       <AboutUsSection locale={locale}/>
       <ServicesSection locale={locale}/>
+      <section className='py-[80px]' id='sportsevents'>
+        <div className="custom-container">
+          <iframe className='w-full h-[800px]' src="https://allevents-az.tickets-partners.com/"></iframe>
+        </div>
+      </section>
       <ContactsSection locale={locale}/>
     </main>
   );
