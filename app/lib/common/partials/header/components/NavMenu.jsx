@@ -15,31 +15,31 @@ const NavMenu = async ({locale}) => {
         {
           key: '1',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('airticket')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('airticket')}</Link>
           )
         },
         {
           key: '2',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('transport')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('transport')}</Link>
           )
         },
         {
           key: '3',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('businesstrips')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('businesstrips')}</Link>
           )
         },
         {
           key: '4',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('visa')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('visa')}</Link>
           )
         },
         {
           key: '5',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#'>{t('conferences')}</Link>
+            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('conferences')}</Link>
           )
         }
       ]
@@ -47,10 +47,6 @@ const NavMenu = async ({locale}) => {
     {
       label: 'about-us',
       href: '#about-us'
-    },
-    {
-      label: 'contacts',
-      href: '#contacts'
     },
     {
       label: 'mice',
@@ -64,11 +60,15 @@ const NavMenu = async ({locale}) => {
       label: 'sportsevents',
       href: 'https://allevents-az.tickets-partners.com/',
       target: '_blank'
-    }
+    },
+    {
+      label: 'contacts',
+      href: '#contact'
+    },
   ]
 
   return (
-    <ul className='flex items-center gap-5'>
+    <ul className='flex items-center gap-7'>
       {navList.map((navItem, i) => {
         if (navItem?.href) {
           return (

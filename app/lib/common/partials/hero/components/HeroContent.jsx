@@ -10,7 +10,10 @@ const HeroContent = () => {
   const { t } = useTranslation()
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+      offset: 200,
+    });
   }, [])
 
   return (

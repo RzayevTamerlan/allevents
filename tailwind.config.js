@@ -16,12 +16,16 @@ module.exports = {
         "larger": "24px",
         "xl": "28px",
         "2xl": '36px',
+        "3xl": '48px',
+        "4xl": '64px',
       },
       colors: {
         secondary: '#FF9E1B',
         'hero-subcontent': '#00AFD7',
         'hero-btn': '#FF6720',
-        'nav-menu-item': '#141B4D'
+        'nav-menu-item': '#141B4D',
+        'contacts-item': '#F1F3F6',
+        'contacts-label': '#47536E',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -9,7 +9,7 @@ const HeroSection = async ({locale}) => {
   const { resources } = await initTranslations(locale, namespace)
 
   return (
-    <section className='background bg-fixed bg-cover bg-center w-full h-[475px] mt-[82px]' style={{backgroundImage: "url('/assets/hero/hero.png')"}}>
+    <section className='background bg-fixed bg-cover bg-center w-full h-[475px] mt-[75px]' style={{backgroundImage: "url('/assets/hero/hero.png')"}}>
       <div className='custom-container h-full'>
         <TranslationsProvider namespaces={namespace} resources={resources} locale={locale} >
           <HeroContent locale={locale}/>

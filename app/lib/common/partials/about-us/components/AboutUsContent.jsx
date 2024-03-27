@@ -12,7 +12,10 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 const AboutUsContent = () => {
   const { t } = useTranslation();
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+      offset: 200,
+    });
   }, []);
 
   return (
