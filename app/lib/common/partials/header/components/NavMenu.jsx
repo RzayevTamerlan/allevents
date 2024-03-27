@@ -58,7 +58,8 @@ const NavMenu = async ({locale}) => {
     },
     {
       label: 'sportsevents',
-      href: '#sportsevents',
+      href: 'https://allevents-az.tickets-partners.com/',
+      target: '_blank'
     },
     {
       label: 'contacts',
