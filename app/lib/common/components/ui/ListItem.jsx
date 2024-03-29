@@ -12,7 +12,7 @@ const ListItem = ({ icon, label, linkText, link, alt }) => {
         <p className='text-inherit uppercase font-semibold text-center text-sm lg:text-medium'>
           {t(label)}
         </p>
-        {linkText && <span className='text-inherit text-base text-center'>{t(linkText)}</span>}
+        {linkText && <span className='text-inherit text-base text-center'>{linkText === 'call-us-text' ? 'WhatsApp' : t(linkText)}</span>}
       </Link>
     ) : (
       <div className='py-12 h-full px-10 flex flex-col transition-all duration-300 hover:scale-105 gap-4 items-center bg-contacts-item text-contacts-label border border-1 border-white'>

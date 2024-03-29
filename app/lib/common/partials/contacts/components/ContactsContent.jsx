@@ -16,7 +16,7 @@ const contactsList = [
     link: 'https://maps.app.goo.gl/YChRYB7gpSiTePZ76'
   },
   {
-    icon: '/assets/icons/phone-call.svg',
+    icon: '/assets/icons/whatsapp.svg',
     label: 'call-us',
     linkText: 'call-us-text',
     alt: 'phone-call',
