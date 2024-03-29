@@ -2,8 +2,6 @@
 
 import {Open_Sans} from "next/font/google";
 import {useTranslation} from "react-i18next";
-import {useEffect} from "react";
-import AOS from "aos";
 import ListItem from "@ui/ListItem";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -44,19 +42,12 @@ const servicesList = [
 const ServicesContent = () => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      offset: 200,
-    });
-  }, []);
-
   return (
     <div className='flex flex-col gap-10'>
-      <h3 className={`${openSans.className} text-3xl font-semibold text-center`} data-aos='fade-up' data-aos-delay='100'>
+      <h3 className={`${openSans.className} text-3xl font-semibold text-center`}>
         {t('services')}
       </h3>
-      <ul data-aos='fade-right' data-aos-delay='100' className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+      <ul className='grid grid-cols-1 md:grid-cols-3 gap-5'>
         {servicesList.map((services, index) => (
           <li key={index}>
             <ListItem alt={services.alt} icon={services.icon} label={services.label} />

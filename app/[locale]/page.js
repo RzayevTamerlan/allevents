@@ -1,8 +1,9 @@
 import HeroSection from "@partials/hero";
 import AboutUsSection from "@partials/about-us";
 import ContactsSection from "@partials/contacts";
-import ServicesContent from "@partials/services/components/ServicesContent";
 import ServicesSection from "@partials/services";
+import BusinessTravelSection from "@partials/buisness-travel";
+import MiceSection from "@partials/mice";
 
 export default function Home({params: {locale}}) {
   return (
@@ -10,6 +11,8 @@ export default function Home({params: {locale}}) {
       <HeroSection locale={locale}/>
       <AboutUsSection locale={locale}/>
       <ServicesSection locale={locale}/>
+      <BusinessTravelSection locale={locale}/>
+      <MiceSection locale={locale}/>
       <ContactsSection locale={locale}/>
     </main>
   );
