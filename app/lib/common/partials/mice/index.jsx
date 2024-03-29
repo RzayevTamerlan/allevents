@@ -9,7 +9,7 @@ const MiceSection = async ({locale}) => {
 
   return (
     <TranslationsProvider resources={resources} locale={locale} namespaces={namespace}>
-      <MiceContent />
+      <MiceContent/>
     </TranslationsProvider>
   );
 };
