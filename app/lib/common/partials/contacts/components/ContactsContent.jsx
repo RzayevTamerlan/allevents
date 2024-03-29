@@ -20,7 +20,7 @@ const contactsList = [
     label: 'call-us',
     linkText: 'call-us-text',
     alt: 'phone-call',
-    link: 'tel:+994552164476'
+    link: 'https://wa.me/+994502103543'
   },
   {
     icon: '/assets/icons/email.svg',

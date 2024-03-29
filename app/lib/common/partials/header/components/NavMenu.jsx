@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import {Dropdown} from "antd";
+import {useTranslation} from "react-i18next";
 
 import "@partials/header/styles/dropdown.css";
-import {useTranslation} from "react-i18next";
 
 const NavMenu =  () => {
   const {t} = useTranslation();

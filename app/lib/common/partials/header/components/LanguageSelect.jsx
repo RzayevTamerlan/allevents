@@ -1,5 +1,3 @@
-'use client';
-
 import Link from "next/link";
 import {Dropdown, Space} from "antd";
 
@@ -42,7 +40,7 @@ const LanguageSelect = ({locale}) => {
       placement="bottom"
       arrow
     >
-      <button className='text-base font-semibold' onClick={(e) => e.preventDefault()}>
+      <button className='text-base font-semibold'>
         <Space>
           {locale.toUpperCase()}
         </Space>
