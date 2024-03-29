@@ -86,6 +86,7 @@ const NavMenu = async ({locale}) => {
           <li key={i}>
             <Dropdown
               placement="bottomLeft"
+              trigger={['hover']}
               menu={{
                 items: navItem.list,
               }}
