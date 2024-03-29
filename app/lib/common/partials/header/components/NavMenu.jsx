@@ -1,12 +1,24 @@
+'use client';
+
 import Link from "next/link";
-import initTranslations from "@/app/i18n";
 import Image from "next/image";
 import {Dropdown} from "antd";
 
 import "@partials/header/styles/dropdown.css";
+import {useTranslation} from "react-i18next";
 
-const NavMenu = async ({locale}) => {
-  const {t} = await initTranslations(locale, ['header']);
+const NavMenu =  () => {
+  const {t} = useTranslation();
+
+  const handleClick = (e, anchore) => {
+    e.preventDefault();
+    if(anchore === 'https://allevents-az.tickets-partners.com/') {
+      window.open(anchore, '_blank');
+      return;
+    }
+    const element = document.querySelector(anchore);
+    element.scrollIntoView({behavior: 'smooth'});
+  }
 
   const navList = [
     {
@@ -15,31 +27,31 @@ const NavMenu = async ({locale}) => {
         {
           key: '1',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('airticket')}</Link>
+            <Link onClick={(e) => handleClick(e, '#services')} className='text-base font-semibold text-nav-menu-item' href='#'>{t('airticket')}</Link>
           )
         },
         {
           key: '2',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('transport')}</Link>
+            <Link onClick={(e) => handleClick(e, '#services')} className='text-base font-semibold text-nav-menu-item' href='#'>{t('transport')}</Link>
           )
         },
         {
           key: '3',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('businesstrips')}</Link>
+            <Link onClick={(e) => handleClick(e, '#services')} className='text-base font-semibold text-nav-menu-item' href='#'>{t('businesstrips')}</Link>
           )
         },
         {
           key: '4',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('visa')}</Link>
+            <Link onClick={(e) => handleClick(e, '#services')} className='text-base font-semibold text-nav-menu-item' href='#'>{t('visa')}</Link>
           )
         },
         {
           key: '5',
           label: (
-            <Link className='text-base font-semibold text-nav-menu-item' href='#services'>{t('conferences')}</Link>
+            <Link onClick={(e) => handleClick(e, '#services')} className='text-base font-semibold text-nav-menu-item' href='#'>{t('conferences')}</Link>
           )
         }
       ]
@@ -74,8 +86,8 @@ const NavMenu = async ({locale}) => {
           return (
             (
               <li key={i}>
-                <Link target={navItem.target || '_self'} className='text-medium transition-all duration-300 hover:text-secondary text-black font-bold'
-                      href={navItem.href}>
+                <Link onClick={(e) => handleClick(e, navItem.href)} target={navItem.target || '_self'} className='text-medium transition-all duration-300 hover:text-secondary text-black font-bold'
+                      href={'#'}>
                   {t(navItem.label)}
                 </Link>
               </li>

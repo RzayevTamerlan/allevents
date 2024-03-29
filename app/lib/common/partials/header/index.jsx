@@ -16,7 +16,9 @@ const Header = async ({locale}) => {
       <div className="custom-container">
         <div className='flex items-center justify-between'>
           <Logo/>
-          <NavMenu locale={locale}/>
+          <TranslationsProvider locale={locale} namespaces={namespace} resources={resources}>
+              <NavMenu />
+          </TranslationsProvider>
           <div className='flex items-center gap-5'>
             <LanguageSelect locale={locale}/>
             <BurgerBtn/>

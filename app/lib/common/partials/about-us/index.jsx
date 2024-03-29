@@ -8,7 +8,7 @@ const AboutUsSection = async ({locale}) => {
   const {resources} = await initTranslations(locale, namespace);
 
   return (
-    <section className='pt-[90px]'>
+    <section id='about-us' className='pt-[90px]'>
       <div className="custom-container">
         <TranslationsProvider resources={resources} locale={locale} namespaces={namespace}>
           <AboutUsContent />
