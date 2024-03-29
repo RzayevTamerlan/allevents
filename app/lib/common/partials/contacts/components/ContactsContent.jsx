@@ -39,7 +39,7 @@ const ContactsContent = () => {
       <h5 className={`${openSans.className} text-2xl lg:text-3xl font-semibold max-w-[734px]`}>{t('contacts')}</h5>
       <ul className='grid gap-5 grid-cols-1 md:grid-cols-3'>
         {contactsList.map((contact, index) => (
-          <li key={index}>
+          <li className='w-full' key={index}>
             <ListItem label={contact.label} link={contact.link} alt={contact.alt} linkText={contact.linkText} icon={contact.icon}/>
           </li>
         ))}

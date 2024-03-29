@@ -7,7 +7,7 @@ const ListItem = ({ icon, label, linkText, link, alt }) => {
 
   return (
     link ? (
-      <Link target='_blank' href={link} className='py-12 h-full px-10 flex flex-col transition-all duration-300 hover:scale-105 gap-4 items-center bg-contacts-item text-contacts-label border border-1 border-white'>
+      <Link target='_blank' href={link} className='py-12 w-full h-full px-10 flex flex-col transition-all duration-300 hover:scale-105 gap-4 items-center bg-contacts-item text-contacts-label border border-1 border-white'>
         <Image src={icon} height='48' width='48' alt={alt} />
         <p className='text-inherit uppercase font-semibold text-center text-sm lg:text-medium'>
           {t(label)}
