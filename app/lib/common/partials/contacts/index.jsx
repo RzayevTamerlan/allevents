@@ -8,7 +8,7 @@ const ContactsSection = async ({locale}) => {
   const { resources } = await initTranslations(locale, namespace);
 
   return (
-    <section id='contact' className='py-[90px]'>
+    <section id='contact' className='py-[35px] lg:py-[90px]'>
       <div className="custom-container">
         <TranslationsProvider resources={resources} locale={locale} namespaces={namespace}>
           <ContactsContent />

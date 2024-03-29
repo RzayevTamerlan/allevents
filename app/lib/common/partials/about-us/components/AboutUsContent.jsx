@@ -10,11 +10,11 @@ const AboutUsContent = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex items-start gap-10'>
+    <div className='flex flex-col lg:flex-row items-start gap-5 lg:gap-10'>
       <h2 className={`${openSans.className} text-base max-w-[734px]`}>
         {t('about-us')}
       </h2>
-      <div className='h-[200px] w-[1px] border border-solid border-blue-500'></div>
+      <div className='h-[1px] w-full lg:h-[200px] lg:w-[1px] border border-solid border-blue-500'></div>
       <div className='flex flex-col gap-5 max-w-[375px]'>
         <p className={`font-bold text-larger ${openSans.className}`}>{t('about-us-touch')}</p>
         <h3 className={`text-base ${openSans.className}`}>

@@ -34,14 +34,14 @@ const BusinessContent = () => {
   const { t } = useTranslation();
 
   return (
-    <section className='py-[90px]' id='trips'>
+    <section className='py-[50px]' id='trips'>
       <div className="custom-container">
         <div className='flex flex-col items-center justify-center'>
-          <h4 className={`${openSans.className} text-3xl font-semibold max-w-[734px]`}>
+          <h4 className={`${openSans.className} text-2xl lg:text-3xl text-center font-semibold max-w-[734px]`}>
             {t('trips')}
           </h4>
-          <p className='text-medium text-center mt-5 max-w-[500px] leading-relaxed'>{t('trips-content')}</p>
-          <ul className='grid grid-cols-3 gap-y-5 mt-10'>
+          <p className='text-base lg:text-medium text-center mt-5 max-w-[500px] leading-relaxed'>{t('trips-content')}</p>
+          <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-5 mt-10'>
             {servicesList.map((service) => (
               <li key={service.id}>
                 <p className='text-base flex items-center gap-2 font-semibold'>

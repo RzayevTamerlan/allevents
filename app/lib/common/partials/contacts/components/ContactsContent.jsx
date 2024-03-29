@@ -35,8 +35,8 @@ const ContactsContent = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex flex-col gap-10 items-center'>
-      <h5 className={`${openSans.className} text-3xl font-semibold max-w-[734px]`}>{t('contacts')}</h5>
+    <div className='flex flex-col gap-5 lg:gap-10 items-center'>
+      <h5 className={`${openSans.className} text-2xl lg:text-3xl font-semibold max-w-[734px]`}>{t('contacts')}</h5>
       <ul className='grid gap-5 grid-cols-1 md:grid-cols-3'>
         {contactsList.map((contact, index) => (
           <li key={index}>

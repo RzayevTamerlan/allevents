@@ -44,7 +44,7 @@ const ServicesContent = () => {
 
   return (
     <div className='flex flex-col gap-10'>
-      <h3 className={`${openSans.className} text-3xl font-semibold text-center`}>
+      <h3 className={`${openSans.className} text-2xl lg:text-3xl font-semibold text-center`}>
         {t('services')}
       </h3>
       <ul className='grid grid-cols-1 md:grid-cols-3 gap-5'>

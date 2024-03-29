@@ -65,10 +65,10 @@ const NavMenu = async ({locale}) => {
       label: 'contacts',
       href: '#contact'
     },
-  ]
+  ];
 
   return (
-    <ul className='flex items-center gap-7'>
+    <ul className='hidden lg:flex items-center gap-7'>
       {navList.map((navItem, i) => {
         if (navItem?.href) {
           return (
