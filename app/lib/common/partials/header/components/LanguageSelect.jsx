@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import {Dropdown, Space} from "antd";
+import {useState} from "react";
 
 const LanguageSelect = ({locale}) => {
+  const [current, setCurrent] = useState(locale);
+
   const languages = [
     {
       key: 1,
@@ -33,7 +36,7 @@ const LanguageSelect = ({locale}) => {
       locale: 'az'
     }
   ];
-
+  console.log(current);
   return (
     <Dropdown
       menu={{
@@ -42,11 +45,9 @@ const LanguageSelect = ({locale}) => {
       placement="bottom"
       arrow
     >
-      <button className='text-base font-semibold'>
-        <Space>
-          {locale.toUpperCase()}
-        </Space>
-      </button>
+      <Space className='cursor-pointer' onClick={() => setCurrent((prev) => !prev)}>
+        {locale.toUpperCase()}
+      </Space>
     </Dropdown>
   );
 };

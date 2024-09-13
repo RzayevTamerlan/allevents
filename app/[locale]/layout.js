@@ -17,6 +17,7 @@ export function generateStaticParams() {
 }
 
 export default function RootLayout({children, params: {locale}}) {
+  console.log(locale);
   return (
     <html lang={locale}>
     <head>
