@@ -1,12 +1,7 @@
-'use client';
-
 import Link from "next/link";
 import {Dropdown, Space} from "antd";
-import {useState} from "react";
 
 const LanguageSelect = ({locale}) => {
-  const [current, setCurrent] = useState(locale);
-
   const languages = [
     {
       key: 1,
@@ -36,7 +31,8 @@ const LanguageSelect = ({locale}) => {
       locale: 'az'
     }
   ];
-  console.log(current);
+
+  console.log('render', locale);
   return (
     <Dropdown
       menu={{
@@ -45,7 +41,7 @@ const LanguageSelect = ({locale}) => {
       placement="bottom"
       arrow
     >
-      <Space className='cursor-pointer' onClick={() => setCurrent((prev) => !prev)}>
+      <Space className='cursor-pointer'>
         {locale.toUpperCase()}
       </Space>
     </Dropdown>
